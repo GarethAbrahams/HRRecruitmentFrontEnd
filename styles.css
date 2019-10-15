@@ -61,6 +61,11 @@ header a:hover
 }
 
 
+td {
+  height: 30px;
+  vertical-align: bottom;
+}
+
 section
 {
 	float: left;

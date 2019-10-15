@@ -2,7 +2,7 @@
 
 require_once 'C:\xampp\htdocs\ADP_RecruitmentApp\APIClient.php';
 
-class applicantMethods {
+class ApplicantMethods {
 	
 	var $BASE_URL;
 	var $apiClient;
@@ -17,10 +17,10 @@ class applicantMethods {
 	}
 	
 	function find($id) {
-		return $this->apiClient->call('GET', $this->BASE_URL.'read/'.$id);
+		return $this->apiClient->call('GET', $this->BASE_URL.'read'.$id);
 	}
 	
-	function create($applicant = array()) {
+	function create($applicant) {
 		return $this->apiClient->call('POST', $this->BASE_URL.'create',$applicant);
 	}
 
@@ -29,7 +29,7 @@ class applicantMethods {
 	}
 
 	function delete($id) {
-		return $this->apiClient->call('DELETE', $this->BASE_URL.'delete/'.$id);
+		return $this->apiClient->call('GET', $this->BASE_URL.'delete/'.$id);
 	}
 }
 ?>
