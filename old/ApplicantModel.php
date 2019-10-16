@@ -25,11 +25,11 @@ class ApplicantMethods {
 	}
 	
 	function create($applicant) {
-		return $this->apiClient->call('POST', $this->BASE_URL.'create/'.$applicant);
+		return $this->apiClient->call('POST', $this->BASE_URL.'create',$applicant);
 	}
 
 	function update($applicant = array()) {
-		return $this->apiClient->call('PUT', $this->BASE_URL.'update', $applicant);
+		return $this->apiClient->call('PUT', $this->BASE_URL.'create', $applicant);
 	}
 
 	function delete($id) {
